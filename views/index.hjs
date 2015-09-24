@@ -1,11 +1,41 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
     <title>{{ title }}</title>
     <link rel='stylesheet' href='/stylesheets/style.css' />
   </head>
-  <body>
-    <h1>{{ title }}</h1>
-    <a href="/auth">Log in to Rdio</a>
+  <body class="splash">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-md-4">
+          <div class="login-card">
+            <h2>{{ title }}</h2>
+            <form method="POST" action="/auth">
+              <div class="form-group">
+                <label for="personalEmailField">Personal Email Address</label>
+                <input
+                  type="email"
+                  name="personalEmail"
+                  class="form-control input-lg"
+                  id="personalEmailField"
+                  placeholder="...for Rdio sign-up"/>
+              </div>
+              <div class="form-group">
+                <label for="workEmailField">LinkedIn Email Address</label>
+                <input
+                  type="email"
+                  name="workEmail"
+                  class="form-control input-lg"
+                  id="workEmailField"
+                  placeholder="...to make sure you're an employee"/>
+              </div>
+              <input type="submit" class="btn btn-lg btn-primary btn-block" value="Log in to Rdio"/>
+            </form>
+            <a class="small" href="/about">About Llama Radio</a>
+          </div>
+        </div>
+      </div>
+    </div>
   </body>
 </html>

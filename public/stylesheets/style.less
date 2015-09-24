@@ -1,10 +1,23 @@
 @import "../../node_modules/bootstrap/less/bootstrap.less";
 
 body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  // font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+body.splash {
+  background: url('/images/llama_splash.jpg') fixed no-repeat;
+  background-size: cover;
+  padding-top: 15px;
 }
 
 a {
   color: #00B7FF;
+}
+
+.login-card {
+  border-radius: 5px;
+  box-shadow: 0px 0px 28px 0px rgba(0,0,0,0.4);
+  border: 1px solid @gray-lighter;
+  padding: 0px 10px 3px 10px;
+  background: rgba(255, 255, 255, 0.9)
 }
